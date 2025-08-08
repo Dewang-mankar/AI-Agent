@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h2>AI Result</h2>
+        <p>The predicted mental health condition is: <strong>{{ condition.upper() }}</strong></p>
+        <p><a href="/form">Check another patient</a> | <a href="/logout">Logout</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Mental Health Check-In</h2>
+        <form method="POST" action="/api/analyze" id="patientForm">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email Address:</label>
+            <input type="email" name="email" required>
+
+            <label>Sleep Issues (0-10):</label>
+            <input type="number" name="sleep" required>
+
+            <label>Appetite (0-10):</label>
+            <input type="number" name="appetite" required>
+
+            <label>Mood Swings(0-10):</label>
+            <input type="number" name="mood" required>
+
+            <label>Suicidal Thoughts (0-10):</label>
+            <input type="number" name="suicidal_thoughts" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
