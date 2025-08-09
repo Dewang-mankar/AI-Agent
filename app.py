@@ -9,8 +9,10 @@ app = Flask(__name__)
 
 # Load environment variables from .env
 
-EMAIL = "dewangcdt123@gmail.com"
-PASSWORD = "ixvb gbwt cvrt fnzn"
+load_dotenv()
+
+EMAIL = os.getenv("EMAIL_USER")
+PASSWORD = os.getenv("EMAIL_PASS")
 
 # Load the trained model
 model = pickle.load(open("model.pkl", "rb"))
@@ -91,3 +93,4 @@ def send_email(to, subject, body):
 
 if __name__ == '__main__':
     app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
